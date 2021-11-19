@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddOperate</class>
+ <widget class="QWidget" name="AddOperate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>893</width>
+    <height>486</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="2,1,1,1,1,1,1,1,1">
+   <item row="1" column="6">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Next Status:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="7" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_SubStateName"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Status List</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="6">
+    <widget class="QCheckBox" name="checkBox_AddSubStatus">
+     <property name="text">
+      <string>Genrate SubStatus</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" rowspan="3" colspan="4">
+    <widget class="QListWidget" name="listWidget_OperateAvailable"/>
+   </item>
+   <item row="2" column="6" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_StatusFilter"/>
+   </item>
+   <item row="6" column="5">
+    <widget class="QPushButton" name="pb_Add_OperateAvailable">
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="4">
+    <widget class="QLineEdit" name="lineEdit_OperateFilter"/>
+   </item>
+   <item row="3" column="6" colspan="3">
+    <widget class="QListWidget" name="listWidget_NextStausList"/>
+   </item>
+   <item row="2" column="1">
+    <widget class="QCheckBox" name="checkBox_StatusMultSelect">
+     <property name="text">
+      <string>MultiSelect</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" colspan="2">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Operate Available</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3" colspan="2">
+    <widget class="QLabel" name="lb_CurrentStatus">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_2"/>
+   </item>
+   <item row="0" column="8" rowspan="2">
+    <widget class="QPushButton" name="pushButton_Hide">
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="6">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>SubState Name:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Current Status:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QPushButton" name="pushButton_Refresh">
+     <property name="text">
+      <string>Refresh</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLineEdit" name="lineEdit_StatusSrcFilter"/>
+   </item>
+   <item row="3" column="0" rowspan="4" colspan="2">
+    <widget class="QListWidget" name="listWidget_StatusList"/>
+   </item>
+   <item row="6" column="8">
+    <widget class="QPushButton" name="pb_OK">
+     <property name="text">
+      <string>确定</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="7">
+    <widget class="QCheckBox" name="checkBox_OperateBack">
+     <property name="text">
+      <string>OBack</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="6">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>PreStatusCutOff:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="7" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_PreStatusCutOff"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
