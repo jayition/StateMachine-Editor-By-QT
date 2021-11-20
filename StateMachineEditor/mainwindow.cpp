@@ -12,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent)
     m_addoperateDlg=nullptr;
     m_generatestatusDlg=nullptr;
     m_DefaultFileName="";
-    m_statemachine.Load("D:\\US_StateMachine.xml");
     m_TreeScene = new DiagramScene(&m_statemachine,this);
     m_TreeScene->setSceneRect(QRectF(0, 0, 1000, 1000));
     ui->gv_Tree->setScene(m_TreeScene);
@@ -116,6 +115,7 @@ void MainWindow::UpdateStateList()
     {
         ui->listWidget_StatusList->addItem(m_statemachine[i].name.c_str());
     }
+    m_TreeScene->ReLoadObjects();
 }
 
 void MainWindow::UpdateOperateList(string state)
@@ -128,6 +128,7 @@ void MainWindow::UpdateOperateList(string state)
     {
         ui->listWidget_OperateList->addItem(itoperate->first.c_str());
     }
+    m_TreeScene->ReLoadObjects();
 }
 
 void MainWindow::on_actionOpen_triggered()

@@ -84,7 +84,8 @@ public:
     void setFont(const QFont &font);
     void GenerateStatusObject();
     void GenerateLineObject();
-
+    void ClearObjects();
+    void ReLoadObjects();
 
 public slots:
     void setMode(Mode mode);

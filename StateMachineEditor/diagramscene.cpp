@@ -90,6 +90,26 @@ void DiagramScene::setMode(Mode mode)
     m_Mode = mode;
 }
 
+
+void DiagramScene::ClearObjects()
+{
+    std::map<string, CStatusGraphicsItem*>::iterator  it;
+    for (it = m_StatusObjectList.begin(); it !=  m_StatusObjectList.end(); ++it)
+    {
+        if(it->second)
+            delete it->second;
+        m_StatusObjectList.erase(it);
+    }
+}
+
+void DiagramScene::ReLoadObjects()
+{
+    ClearObjects();
+    GenerateStatusObject();
+    GenerateLineObject();
+    update();
+}
+
 void DiagramScene::GenerateStatusObject()
 {
     if(m_statemachine==nullptr)
@@ -110,9 +130,9 @@ void DiagramScene::GenerateStatusObject()
             int iheight,iwidth;
             iheight=height();
             iwidth=width();
-            if((currentx+item->m_iwidth+500)>=iwidth)
+            if((currentx+item->m_iwidth+100)>=iwidth)
             {
-                if((currentx+item->m_iheight+500)>=iheight)
+                if((currentx+item->m_iheight+100)>=iheight)
                 {
                     currentx=100;
                     currenty=100;
